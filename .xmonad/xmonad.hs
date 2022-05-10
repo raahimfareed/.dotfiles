@@ -13,7 +13,7 @@ main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 
 -- My stuff
 myBrowser = "chromium"
-myFileManager = "dolphin"
+myFileManager = "nemo"
 myTerminal = "alacritty"
 myCodeEditor = "code"
 myTerminalCodeEditor = "nvim"
@@ -31,11 +31,12 @@ myKeys =
   , ("<XF86AudioLowerVolume>",  spawn "pamixer --decrease 5 --allow-boost")
   , ("<XF86MonBrightnessUp>",  spawn "brightnessctl set +10%")
   , ("<XF86MonBrightnessDown>",  spawn "brightnessctl set 10%-")
+  , ("<XF86Bluetooth>", spawn (myBrowser))
   , ("<XF86Tools>", spawn (myCodeEditor))
   , ("<XF86Favorites>", spawn (myFileManager))
   , ("M-<XF86Favorites>", spawn (myTerminal ++ " -e " ++ myTerminalCodeEditor))
-  -- , ("<Print>", spawn "flameshot gui")
-  , ("<Print>", spawn "~/scripts/scrot.sh")
+  , ("<Print>", spawn "flameshot gui")
+  -- , ("<Print>", spawn "~/scripts/scrot.sh")
   , ("M-<Print>", spawn "~/scripts/scrot-select.sh")
   , ("M-S-b", spawn (myBrowser))
   , ("M-S-m", spawn (myFileManager))
@@ -44,10 +45,10 @@ myKeys =
 
 myStartupHook :: X ()
 myStartupHook = do
-  -- spawnOnce "flameshot &"
+  spawnOnce "flameshot"
   -- spawnOnce "parcellite &"
   spawnOnce "feh --bg-fill ~/Wallpapers/arch-computer-wallpaper.png"
-  spawnOnce "dunst &"
+  spawnOnce "dunst"
 
 -- Main configuration
 myConfig = def
