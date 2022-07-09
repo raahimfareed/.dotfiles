@@ -1,15 +1,19 @@
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
+autoload -U promptinit; promptinit
+prompt pure
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
+#ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -107,14 +111,17 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-alias ls="exa"
+alias ls=exa
+alias spotify=spt
 alias mount_uni="~/scripts/university_fs.sh"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-alias edge="microsoft-edge-dev"
-alias zhcn="~/Projects/Personal/english-to-chinese/main.py"
-alias new-eth="~/Projects/NodeJs/Web3Js/new-blockchain-account-eth/app.js"
+alias zhcn="~/projects/Personal/english-to-chinese/main.py"
+alias new-eth="~/projects/NodeJs/Web3Js/new-blockchain-account-eth/app.js"
 alias l-serve="php artisan serve"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias sublime=subl
+alias bt-connect="~/scripts/bluetooth-connect.sh"
+alias dog='pygmentize -g'
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
