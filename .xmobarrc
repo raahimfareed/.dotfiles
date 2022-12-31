@@ -1,13 +1,12 @@
 
-Config { font            = "xft:JetBrains Mono:weight=bold:pixelsize=11:antialias=true:hinting=true"
-       , additionalFonts = [ "xft:Mononoki:pixelsize=11:antialias=true:hinting=true"
-                           , "xft:Font Awesome 6 Free Solid:pixelsize=12"
-                           , "xft:Font Awesome 6 Brands:pixelsize=12"
+Config { font            = "xft:Iosevka Term:weight=bold:pixelsize=12:antialias=true:hinting=true"
+       , additionalFonts = [ "xft:Mononoki:pixelsize=12:antialias=true:hinting=true"
+                           , "xft:Font Awesome 6 Free Solid:pixelsize=13"
+                           , "xft:Font Awesome 6 Brands:pixelsize=13"
                            ]
        , bgColor      = "#282c34"
        , fgColor      = "#ff6c6b"
-       -- , position     = BottomSize C 100 30
-       , position     = TopSize C 100 30
+       , position     = Static { xpos = 20, ypos = 20, width = 1880, height = 40 }
        , lowerOnStart = True
        , hideOnStart  = False
        , allDesktops  = True

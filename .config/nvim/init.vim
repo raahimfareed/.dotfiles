@@ -1,5 +1,7 @@
 call plug#begin()
 
+Plug 'phpactor/phpactor', { 'do': ':call phpactor#Update()', 'for': 'php'}
+Plug 'phpactor/ncm2-phpactor', {'for': 'php'}
 Plug 'neoclide/coc.nvim', {'branch':'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -12,8 +14,32 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhinz/vim-startify'
-Plug 'github/copilot.vim'
 Plug 'lilydjwg/colorizer'
+Plug 'mattn/emmet-vim'
+" Collection of common configurations for the Nvim LSP client
+Plug 'neovim/nvim-lspconfig'
+
+" Completion framework
+Plug 'hrsh7th/nvim-cmp'
+
+" LSP completion source for nvim-cmp
+Plug 'hrsh7th/cmp-nvim-lsp'
+
+" Snippet completion source for nvim-cmp
+Plug 'hrsh7th/cmp-vsnip'
+
+" Other usefull completion sources
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-buffer'
+
+" See hrsh7th's other plugins for more completion sources!
+
+" To enable more of the features of rust-analyzer, such as inlay hints and more!
+Plug 'simrat39/rust-tools.nvim'
+
+" Snippet engine
+Plug 'hrsh7th/vim-vsnip'
+
 
 call plug#end()
 
@@ -28,8 +54,8 @@ let g:coc_global_extensions = [
   \ ]
 
 " Use Ctrl left and right to switch tabs
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+"nnoremap <C-Left> :tabprevious<CR>
+"nnoremap <C-Right> :tabnext<CR>
 
 " NERDTree
 nmap <C-n> :NERDTreeToggle<Cr>
@@ -47,6 +73,10 @@ set cindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" Show character for tabs
+set list
+set listchars=tab:!·,trail:·
 
 " Show line number
 set number

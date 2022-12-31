@@ -122,6 +122,13 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias sublime=subl
 alias bt-connect="~/scripts/bluetooth-connect.sh"
 alias dog='pygmentize -g'
+alias supdate="sudo pacman -Syu"
+alias cal="cal -m"
+alias sdl-init="~/scripts/sdl2-init.sh"
+alias leetcode-init="~/scripts/leetcode-init.sh"
+alias cpi="~/scripts/comp-programming-init.sh"
+alias cpx="~/scripts/comp-programming-cpp-compile.sh"
+alias xcopy="~/scripts/xcopy.sh"
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -131,6 +138,28 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/.config/composer/vendor/bin
 # export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
 
-pfetch
-
 [ -f "/home/yeet/.ghcup/env" ] && source "/home/yeet/.ghcup/env" # ghcup-env
+
+function initial_command() {
+    commands_list=(
+            "pfetch"
+            "toilet -f mono12 -F metal Raahim"
+            "cowsay \"Why are we here? Just to suffer?\""
+            "cowsay \"I'm not sure what I'm doing here...\""
+            "cowsay \"Who am I?\""
+            "cowsay \"Linux is better than Windows, right?\""
+            "cowsay \"C++ > Python\""
+            "cowsay \"Rust is cool\""
+            "cal"
+            "cowsay \"i use arch btw\""
+            "cowsay \":(){ :|:& }:\""
+            "toilet -F border -F rainbow \"Why are you gae?\""
+            "printf \"i UsE LiNuX, iM sO eDgY\\n\""
+        )
+
+        index=$(((RANDOM % ${#commands_list[@]}) + 1))
+        c="${commands_list[$index]}"
+        eval " $c"
+}
+
+# initial_command

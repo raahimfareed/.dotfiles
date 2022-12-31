@@ -12,7 +12,7 @@ import Graphics.X11.ExtraTypes.XF86
 main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 
 -- My stuff
-myBrowser = "chromium"
+myBrowser = "firefox-developer-edition"
 myFileManager = "nemo"
 myTerminal = "alacritty"
 myCodeEditor = "code"
@@ -32,6 +32,7 @@ myKeys =
   , ("<XF86MonBrightnessUp>",  spawn "brightnessctl set +10%")
   , ("<XF86MonBrightnessDown>",  spawn "brightnessctl set 10%-")
   , ("<XF86Bluetooth>", spawn (myBrowser))
+  , ("S-<XF86Bluetooth>", spawn (myBrowser ++ " --private-window"))
   , ("<XF86Tools>", spawn (myCodeEditor))
   , ("<XF86Favorites>", spawn (myFileManager))
   , ("M-<XF86Favorites>", spawn (myTerminal ++ " -e " ++ myTerminalCodeEditor))
@@ -47,7 +48,7 @@ myStartupHook :: X ()
 myStartupHook = do
   spawnOnce "flameshot"
   -- spawnOnce "parcellite &"
-  spawnOnce "feh --bg-fill ~/Wallpapers/arch-computer-wallpaper.png"
+  spawnOnce "feh --bg-fill ~/Pictures/wallpapers/arch-computer-wallpaper.png"
   spawnOnce "dunst"
 
 -- Main configuration
