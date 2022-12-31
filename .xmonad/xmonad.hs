@@ -2,6 +2,12 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Prompt.ConfirmPrompt
 
+-- Layouts
+import XMonad.Layout.Tabbed;
+import XMonad.Layout.ResizableTile;
+import XMonad.Layout.Spacing;
+import XMonad.Layout.NoBorders (noBorders, smartBorders);
+
 import XMonad.Util.EZConfig (additionalKeysP)
 import XMonad.Util.SpawnOnce
 
@@ -48,8 +54,17 @@ myStartupHook :: X ()
 myStartupHook = do
   spawnOnce "flameshot"
   -- spawnOnce "parcellite &"
-  spawnOnce "feh --bg-fill ~/Pictures/wallpapers/arch-computer-wallpaper.png"
+  spawnOnce "feh --bg-fill ~/Pictures/wallpapers/967674.jpg"
   spawnOnce "dunst"
+  spawnOnce "picom"
+
+-- Layout Hook
+myLayoutHook = 
+    smartBorders $
+    Tall 1 (10/100) (60/100)
+    ||| noBorders Full
+    ||| simpleTabbed
+    -- ||| Mirror (Tall 1 (10/100) (60/100))
 
 -- Main configuration
 myConfig = def
@@ -60,4 +75,5 @@ myConfig = def
   , focusedBorderColor = "#51a6e2"
   , workspaces = ["web", "dev", "3", "4", "5", "6", "7", "file", "term"]
   , startupHook = myStartupHook
+  , layoutHook = spacingWithEdge 10 $ myLayoutHook
   } `additionalKeysP` myKeys
