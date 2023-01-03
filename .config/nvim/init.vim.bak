@@ -58,8 +58,8 @@ let g:coc_global_extensions = [
 "nnoremap <C-Right> :tabnext<CR>
 
 " NERDTree
-nmap <C-n> :NERDTreeToggle<Cr>
-let g:NERDTreeIgnore = ['^node_modules$']
+"nmap <C-n> :NERDTreeToggle<Cr>
+"let g:NERDTreeIgnore = ['^node_modules$']
 
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
@@ -79,7 +79,7 @@ set list
 set listchars=tab:!·,trail:·
 
 " Show line number
-set number
+set relativenumber
 
 " Gruvbox config
 let g:gruvbox_italic=1
