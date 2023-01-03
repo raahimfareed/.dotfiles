@@ -129,6 +129,7 @@ alias leetcode-init="~/scripts/leetcode-init.sh"
 alias cpi="~/scripts/comp-programming-init.sh"
 alias cpx="~/scripts/comp-programming-cpp-compile.sh"
 alias xcopy="~/scripts/xcopy.sh"
+alias code="echo '' > /dev/null"
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
