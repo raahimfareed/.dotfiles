@@ -1,12 +1,18 @@
 import XMonad
 import XMonad.Hooks.DynamicLog
-import XMonad.Prompt.ConfirmPrompt
 
 -- Layouts
+import XMonad.Layout.Renamed;
 import XMonad.Layout.Tabbed;
+import XMonad.Layout.Fullscreen;
 import XMonad.Layout.ResizableTile;
 import XMonad.Layout.Spacing;
 import XMonad.Layout.NoBorders (noBorders, smartBorders);
+
+-- Prompts
+import XMonad.Prompt
+import XMonad.Prompt.Shell
+import XMonad.Prompt.ConfirmPrompt
 
 import XMonad.Util.EZConfig (additionalKeysP)
 import XMonad.Util.SpawnOnce
@@ -48,6 +54,7 @@ myKeys =
   , ("M-S-b", spawn (myBrowser))
   , ("M-S-m", spawn (myFileManager))
   , ("M-S-a", killAll)
+  -- , ("M-S-x", shellPrompt def)
   ]
 
 myStartupHook :: X ()
@@ -58,12 +65,16 @@ myStartupHook = do
   spawnOnce "dunst"
   spawnOnce "picom"
 
--- Layout Hook
-myLayoutHook = 
-    smartBorders $
-    Tall 1 (10/100) (60/100)
-    ||| noBorders Full
-    ||| simpleTabbed
+-- Layouts
+full = noBorders
+        $ Full
+tall = renamed [Replace "tall"]
+        $ spacingWithEdge 10
+        $ smartBorders
+        $ Tall 1 (10/100) (60/100)
+
+myLayoutHook = tall
+            ||| full
     -- ||| Mirror (Tall 1 (10/100) (60/100))
 
 -- Main configuration
@@ -75,5 +86,7 @@ myConfig = def
   , focusedBorderColor = "#51a6e2"
   , workspaces = ["web", "dev", "3", "4", "5", "6", "7", "file", "term"]
   , startupHook = myStartupHook
-  , layoutHook = spacingWithEdge 10 $ myLayoutHook
+  , handleEventHook = fullscreenEventHook
+  , manageHook = fullscreenManageHook
+  , layoutHook = myLayoutHook
   } `additionalKeysP` myKeys
