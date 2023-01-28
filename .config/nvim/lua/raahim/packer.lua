@@ -60,4 +60,6 @@ use {
   end
 }
 
+use "wannesm/wmnusmv.vim"
+
 end)
