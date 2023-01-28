@@ -1,4 +1,5 @@
 import XMonad
+--import XMonad.Core (io)
 import XMonad.Hooks.DynamicLog
 
 -- Layouts
@@ -18,8 +19,12 @@ import XMonad.Util.EZConfig (additionalKeysP)
 import XMonad.Util.SpawnOnce
 
 import XMonad.Actions.WithAll (killAll)
+import XMonad.Actions.SpawnOn
 
 import Graphics.X11.ExtraTypes.XF86
+
+import Control.Concurrent;
+import Control.Monad;
 
 main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 
@@ -46,6 +51,8 @@ myKeys =
   , ("<XF86Bluetooth>", spawn (myBrowser))
   , ("S-<XF86Bluetooth>", spawn (myBrowser ++ " --private-window"))
   , ("<XF86Tools>", spawn (myCodeEditor))
+  , ("M-<XF86Tools>", spawn "redshift -P -O 5000")
+  , ("M-S-<XF86Tools>", spawn "redshift -P -O 8000")
   , ("<XF86Favorites>", spawn (myFileManager))
   , ("M-<XF86Favorites>", spawn (myTerminal ++ " -e " ++ myTerminalCodeEditor))
   , ("<Print>", spawn "flameshot gui")
@@ -60,8 +67,7 @@ myKeys =
 myStartupHook :: X ()
 myStartupHook = do
   spawnOnce "flameshot"
-  -- spawnOnce "parcellite &"
-  spawnOnce "feh --bg-fill ~/Pictures/wallpapers/967674.jpg"
+  spawnOnce "feh --bg-fill ~/Pictures/wallpapers/night.jpg"
   spawnOnce "dunst"
   spawnOnce "picom"
 
