@@ -27,7 +27,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
@@ -37,4 +37,4 @@ vim.opt.list = true
 -- set list
 -- set listchars=tab:!·,trail:·
 
-
+vim.g.netrw_banner = false
