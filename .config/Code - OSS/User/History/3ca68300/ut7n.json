@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "/home/raahim/projects/embedded/stm32f401cc-generic-test"
+		},
+		{
+			"name": "blackpill-test",
+			"path": "/home/raahim/projects/embedded/blackpill-test"
+		}
+	],
+	"settings": {}
+}

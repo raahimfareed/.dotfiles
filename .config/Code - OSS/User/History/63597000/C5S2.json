@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "/home/raahim/projects/embedded/stm32-arduino-test"
+		},
+		{
+			"name": "stm32f401cc-generic-test",
+			"path": "/home/raahim/projects/embedded/stm32f401cc-generic-test"
+		}
+	],
+	"settings": {}
+}

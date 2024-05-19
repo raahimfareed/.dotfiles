@@ -1,0 +1,20 @@
+import TopNavLink from "@/Components/TopNavLink";
+import { Head } from "@inertiajs/react";
+
+const Index = () => {
+    return (
+        <>
+            <Head title="Welcome!" />
+            <div>
+                <div className="w-full h-32 shadow flex items-center gap-3">
+                    <TopNavLink name="Home" />
+                    <TopNavLink name="Home" />
+                    <TopNavLink name="Home" />
+                </div>
+            </div>
+        </>
+    );
+}
+
+
+export default Index;
