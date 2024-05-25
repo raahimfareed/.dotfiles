@@ -5,13 +5,32 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "height": 48,
-    "modules-left": ["custom/launch_wofi","wlr/workspaces","cpu","memory","disk","hyprland/window"],
-    "modules-center": ["custom/lock_screen","clock","custom/power_btn"],
-    "modules-right": ["temperature","battery","backlight","pulseaudio","pulseaudio#microphone","tray","custom/weather","custom/light_dark"],
+    "height": 44,
+    "modules-left": ["cpu", "memory", "disk", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["temperature", "battery", "backlight", "pulseaudio", "pulseaudio#microphone", "tray", "custom/weather", "custom/light_dark"],
 
     "hyprland/window": {
         "format": "{}"
+    },
+
+    "hyprland/workspaces": {
+      "format": "{icon} {windows}",
+      "format-window-separator": " ",
+      "window-rewrite-default": "\uf2d0",
+      "window-rewrite": {
+        "title<.*youtube.*>": "\uf16a",
+        "class<firefoxdeveloperedition>": "\uf269",
+        "class<thunar>": "\uf0c5",
+        "class<alacritty>": "\uf120",
+        "class<kitty>": "\uf120",
+        "class<thunar>": "\uf0c5",
+        "class<nemo>": "\uf0c5",
+        "class<firefoxdeveloperedition> title<.*github.*>": "\uf09b",
+        "foot": "\uf120",
+        "tmux": "\uf120",
+        "code": "\uf121"
+      }
     },
 
     "custom/launch_wofi": {
@@ -73,6 +92,7 @@
 
     "wlr/workspaces": {
         "disable-scroll": true,
+        "active-only": true,
         "all-outputs": true,
         "on-click": "activate",
         "persistent_workspaces": {
@@ -99,14 +119,14 @@
     },
 
     "tray": {
-        "icon-size": 10,
+        "icon-size": 18,
         "spacing": 10
     },
 
     "clock": {
-        "format": "{:%Y %m %d %H:%M}",
+        "format": "\uf073 {:%Y %m %d %H:%M}",
         "tooltip": true,
-        "tooltip-format": "{: %A, %B %e %Y}"
+        "tooltip-format": "\uf073 {:%A, %B %e %Y}"
     },
 
     "backlight": {
@@ -152,8 +172,8 @@
 
     "pulseaudio#microphone": {
         "format": "{format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format-source": "\uf130 {volume}%",
+        "format-source-muted": "\uf131 ",
         "on-click": "pamixer --default-source -t",
         "on-click-right": "pavucontrol",
         "on-scroll-up": "pamixer --default-source -i 5",
@@ -163,7 +183,7 @@
     
     "temperature": {
         "thermal-zone": 1,
-        "format": " {temperatureF}°F",
+        "format": " {temperatureC}°C",
         "critical-threshold": 70,
         "format-critical": " {temperatureC}°C",
         "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
