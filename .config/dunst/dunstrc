@@ -58,7 +58,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 1
+    transparency = 50
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
@@ -212,7 +212,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/chromium -new-tab
+    browser = /usr/bin/firefox-developer-edition --new-window
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true

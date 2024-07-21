@@ -21,13 +21,18 @@
       "window-rewrite": {
         "title<.*youtube.*>": "\uf16a",
         "class<firefoxdeveloperedition>": "\uf269",
+        "class<firefoxdeveloperedition> title<.*github.*>": "\uf09b",
+        "class<firefoxdeveloperedition> title<.*duckduckgo.*>": "\uf002",
+        "class<firefoxdeveloperedition> title<.*google.*>": "\uf1a0",
+        "class<firefoxdeveloperedition> title<.*gmail.*>": "\uf1a0",
+        "class<firefoxdeveloperedition> title<.*whatsapp.*>": "\uf232",
+        "class<steam>": "\uf1b6",
+        "class<lutris>": "\uf11b",
         "class<thunar>": "\uf0c5",
         "class<alacritty>": "\uf120",
         "class<kitty>": "\uf120",
         "class<thunar>": "\uf0c5",
         "class<nemo>": "\uf0c5",
-        "class<firefoxdeveloperedition> title<.*github.*>": "\uf09b",
-        "foot": "\uf120",
         "tmux": "\uf120",
         "code": "\uf121"
       }

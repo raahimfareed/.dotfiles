@@ -20,10 +20,8 @@
             "file:///home/raahim/projects/forks/ds4drv": "__default__profile__"
         },
         "emptyWindows": {
-            "1716623197603": "__default__profile__",
-            "1716623198422": "__default__profile__",
-            "1716623198112": "__default__profile__",
-            "1716623198937": "__default__profile__"
+            "1720800571806": "__default__profile__",
+            "1720800583904": "__default__profile__"
         }
     },
     "profileAssociationsMigration": true,
@@ -31,12 +29,15 @@
     "telemetry.machineId": "78db8896bfd05d033d5124ea53d1520d3b03dca6c9f8e8c367eb53a02452e497",
     "backupWorkspaces": {
         "workspaces": [],
-        "folders": [
+        "folders": [],
+        "emptyWindows": [
             {
-                "folderUri": "file:///home/raahim/projects/forks/ds4drv"
+                "backupFolder": "1720800571806"
+            },
+            {
+                "backupFolder": "1720800583904"
             }
-        ],
-        "emptyWindows": []
+        ]
     },
     "lastKnownMenubarData": {
         "menus": {
@@ -199,6 +200,17 @@
                                     "id": "openRecentFile",
                                     "uri": {
                                         "$mid": 1,
+                                        "external": "file:///home/raahim/Downloads/bookmarks-2024-07-12.json",
+                                        "path": "/home/raahim/Downloads/bookmarks-2024-07-12.json",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "~/Downloads/bookmarks-2024-07-12.json"
+                                },
+                                {
+                                    "id": "openRecentFile",
+                                    "uri": {
+                                        "$mid": 1,
                                         "external": "file:///home/raahim/projects/embedded/stm32f-test/platformio.ini",
                                         "path": "/home/raahim/projects/embedded/stm32f-test/platformio.ini",
                                         "scheme": "file"
@@ -317,13 +329,6 @@
                         "label": "Share",
                         "submenu": {
                             "items": [
-                                {
-                                    "id": "github.copyVscodeDevLinkFile",
-                                    "label": "Copy vscode.dev Link"
-                                },
-                                {
-                                    "id": "vscode.menubar.separator"
-                                },
                                 {
                                     "id": "workbench.profiles.actions.exportProfile",
                                     "label": "Export Profile (Default)..."
@@ -450,10 +455,6 @@
                     {
                         "id": "workbench.action.closeActiveEditor",
                         "label": "&&Close Editor"
-                    },
-                    {
-                        "id": "workbench.action.closeFolder",
-                        "label": "Close &&Folder"
                     },
                     {
                         "id": "workbench.action.closeWindow",
@@ -649,8 +650,7 @@
                                 },
                                 {
                                     "id": "workbench.action.toggleSidebarVisibility",
-                                    "label": "&&Primary Side Bar",
-                                    "checked": true
+                                    "label": "&&Primary Side Bar"
                                 },
                                 {
                                     "id": "workbench.action.toggleAuxiliaryBar",
@@ -860,6 +860,13 @@
                                     "id": "vscode.menubar.separator"
                                 },
                                 {
+                                    "id": "workbench.action.splitEditorInGroup",
+                                    "label": "Split in &&Group"
+                                },
+                                {
+                                    "id": "vscode.menubar.separator"
+                                },
+                                {
                                     "id": "workbench.action.moveEditorToNewWindow",
                                     "label": "&&Move Editor into New Window"
                                 },
@@ -960,7 +967,7 @@
                     {
                         "id": "editor.action.toggleWordWrap",
                         "label": "&&Word Wrap",
-                        "enabled": false
+                        "checked": true
                     }
                 ]
             },
@@ -968,8 +975,7 @@
                 "items": [
                     {
                         "id": "workbench.action.navigateBack",
-                        "label": "&&Back",
-                        "enabled": false
+                        "label": "&&Back"
                     },
                     {
                         "id": "workbench.action.navigateForward",
@@ -1485,11 +1491,6 @@
                 "isNative": false,
                 "userSettingsLabel": "ctrl+w q"
             },
-            "workbench.action.closeFolder": {
-                "label": "Ctrl+K F",
-                "isNative": false,
-                "userSettingsLabel": "ctrl+k f"
-            },
             "workbench.action.closeWindow": {
                 "label": "Alt+F4",
                 "userSettingsLabel": "alt+f4"
@@ -1646,6 +1647,11 @@
                 "label": "Ctrl+W V",
                 "isNative": false,
                 "userSettingsLabel": "ctrl+w v"
+            },
+            "workbench.action.splitEditorInGroup": {
+                "label": "Ctrl+K Ctrl+Shift+\\",
+                "isNative": false,
+                "userSettingsLabel": "ctrl+k ctrl+shift+\\"
             },
             "workbench.action.copyEditorToNewWindow": {
                 "label": "Ctrl+K O",
@@ -1878,14 +1884,13 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/raahim/projects/forks/ds4drv",
-            "backupPath": "/home/raahim/.config/Code - OSS/Backups/9a7eddf519884c490841c45b16d5b85a",
+            "backupPath": "/home/raahim/.config/Code - OSS/Backups/1720800571806",
             "uiState": {
                 "mode": 1,
                 "x": 6,
-                "y": 6,
+                "y": 524,
                 "width": 948,
-                "height": 1020
+                "height": 506
             }
         },
         "openedWindows": []
@@ -1910,7 +1915,7 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 0,
             "activityBarWidth": 48,
-            "sideBarWidth": 170,
+            "sideBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
