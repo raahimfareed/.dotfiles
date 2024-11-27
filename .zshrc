@@ -183,3 +183,12 @@ export PATH="$PATH:$NPM_PACKAGES/bin"
 # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 # source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+# pnpm
+export PNPM_HOME="/home/raahim/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+ bindkey '^ ' autosuggest-accept 
