@@ -1,0 +1,33 @@
+
+Config { font            = "JetBrains Mono 9"
+       , additionalFonts = [ "Mononoki 9"
+                           , "Font Awesome 6 Free Solid 9"
+                           , "Font Awesome 6 Brands 9"
+                           ]
+       , bgColor      = "#282c34"
+       , fgColor      = "#ff6c6b"
+       -- , position     = Static { xpos = 20, ypos = 20, width = 1880, height = 40 }
+       , position     = TopSize C 100 40
+       , lowerOnStart = True
+       , hideOnStart  = False
+       , allDesktops  = True
+       , persistent   = True
+       , commands = [ Run Cpu ["-t", "<fn=2>\xf108</fn> cpu: (<total>%)","-H","50","--high","red"] 20
+                    , Run Memory ["-t", "<fn=2>\xf233</fn> mem: <used>M (<usedratio>%)"] 20
+                    , Run DiskU [("/", "<fn=2>\xf0c7</fn> hdd: <free> free")] [] 60
+                    , Run Com "echo" ["<fn=2>\xf028</fn>"] "volume" 36000
+                    , Run Volume "default" "Master" [] 10
+                    , Run Com "echo" ["<fn=2>\xf1eb</fn>"] "wifi" 36000
+                    , Run Wireless "wlp58s0" [ "-t", "wifi: <essid> (<quality>%)" ] 10
+                    , Run Com "echo" ["<fn=2>\xf242</fn>"] "baticon" 36000
+                    , Run BatteryP ["BAT0", "BAT1"] ["-t", "<acstatus> <watts> (<left>%)"] 1
+                    , Run Com "echo" ["<fn=2>\xf11c</fn>"] "keyboard" 36000
+                    , Run Com "/home/yeet/scripts/get-layout.sh" [] "current_layout" 5
+                    , Run Date "<fn=2>\xf017</fn> %Y %m %d  %H:%M:%S" "date" 1
+                    , Run UnsafeStdinReader
+                    , Run Com "echo" ["<fn=2>\xf5fd</fn>"] "layers" 36000
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %layers% %UnsafeStdinReader% }{ <fc=#ecbe7b><action=`alacritty -e htop`>%cpu%</action></fc>    <fc=#ff6c6b><action=`alacritty -e htop`>%memory%</action></fc>    <fc=#a89cf4><action=`alacritty -e htop`>%disku%</action></fc>    <fc=#f9ff68>%volume% <action=`pavucontrol`>%default:Master%</action></fc>   <fc=#7ad86a>%wifi% <action=`alacritty -e nmtui`>%wlp58s0wi%</action></fc>    <fc=#f29959>%baticon% <action=`alacritty -e sudo pacman -Syu`>%battery%</action></fc>    <fc=#eeeeee>%keyboard%</fc> <fc=#eeeeee>%current_layout%</fc>    <fc=#46d9ff>%date%</fc> %%"
+       }
