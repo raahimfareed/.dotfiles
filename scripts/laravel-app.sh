@@ -18,7 +18,7 @@ fi
 
 echo "Project created!"
 
-cd testing
+cd $path
 
 echo "Running npm install"
 npm i
