@@ -1,0 +1,7 @@
+bin
+obj
+*.pdf
+*.mp4
+*.o
+test
+TODO.md

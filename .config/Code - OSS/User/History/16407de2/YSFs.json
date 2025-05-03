@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "/home/raahim/projects/embedded/blackpill-test"
+		},
+		{
+			"name": "pico-test",
+			"path": "/home/raahim/projects/embedded/pico-test"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,1 @@
+print("Ruyan is a good name/n" *23332)
