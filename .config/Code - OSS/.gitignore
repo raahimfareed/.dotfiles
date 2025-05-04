@@ -1,0 +1,20 @@
+# Code - OSS cache and temporary files
+Cache/
+CachedData/
+Code Cache/
+DawnGraphiteCache/
+DawnWebGPUCache/
+GPUCache/
+Local Storage/
+Service Worker/
+Session Storage/
+Shared Dictionary/
+SharedStorage*
+TransportSecurity
+WebStorage/
+*.lock
+**/LOG*
+**/*.log
+**/*.backup
+**/data_*
+**/index-dir/
