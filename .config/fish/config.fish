@@ -19,6 +19,8 @@ end
 
 zoxide init fish | source
 
+set -gx PATH /home/raahim/.config/composer/vendor/bin $PATH
+
 # function fish_prompt
 #   set_color cyan; echo (pwd)
 #   set_color green; echo '> '
