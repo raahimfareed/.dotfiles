@@ -10,7 +10,7 @@ GNU Stow is used for handling my dotfiles.
 - GNU Stow
 - Git
 
-To install these prerequisites in Arch (btw) which my daily driver
+To install these prerequisites in Arch (btw) which is my daily driver
 ```
 $ sudo pacman -S stow git
 ```
