@@ -14,3 +14,6 @@ alias gb='git branch'
 alias gp='git push'
 alias gpl='git pull --rebase'
 alias gf='git fetch'
+alias start-vpn='sudo systemctl start openvpn-client@client'
+alias stop-vpn='sudo systemctl start openvpn-client@client'
+alias wine64=wine
