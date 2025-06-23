@@ -1,2 +1,4 @@
-^\.config/Code - OSS/
-!^\.config/Code - OSS/User/[^/]+\.json$
+# Ignore all Code - OSS data except config files
+.config/Code - OSS/*
+!.config/Code - OSS/User/
+!.config/Code - OSS/User/*.json
