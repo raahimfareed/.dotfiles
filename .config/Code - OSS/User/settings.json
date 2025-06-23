@@ -32,7 +32,7 @@
   "terminal.integrated.enableFileLinks": false,
   "editor.minimap.scale": 2,
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "editor.inlineSuggest.enabled": true,
   "[javascriptreact]": {

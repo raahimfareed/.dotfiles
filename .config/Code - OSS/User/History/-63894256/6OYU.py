@@ -1,2 +1,0 @@
-Ruyan = "Raina"
-print(Ruyan)

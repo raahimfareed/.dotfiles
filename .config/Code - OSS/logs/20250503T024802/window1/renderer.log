@@ -1,7 +1,0 @@
-2025-05-03 02:48:03.198 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system
-2025-05-03 02:48:03.324 [info] Started local extension host with pid 85369.
-2025-05-03 02:48:03.485 [error] Extension 'ms-python.debugpy CANNOT USE these API proposals 'portsAttributes, debugVisualization, contribViewsWelcome'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
-2025-05-03 02:48:03.485 [error] Extension 'ms-python.python CANNOT USE these API proposals 'contribEditorContentMenu, quickPickSortByLabel, testObserver, quickPickItemTooltip, terminalDataWriteEvent, terminalExecuteCommandEvent, codeActionAI, notebookReplDocument, notebookVariableProvider'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
-2025-05-03 02:48:03.509 [error] [ms-python.python]: editor/content is a proposed menu identifier. It requires 'package.json#enabledApiProposals: ["contribEditorContentMenu"]' and is only available when running out of dev or with the following command line switch: --enable-proposed-api ms-python.python
-2025-05-03 02:48:05.928 [info] [perf] Render performance baseline is 20ms
-2025-05-03 02:50:25.265 [warning] [backup tracker] suspended, ignoring unregister event file:///home/raahim/projects/people/abeer/20250430/README.md 

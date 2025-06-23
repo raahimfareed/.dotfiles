@@ -18,7 +18,15 @@
             "file:///home/raahim/projects/personal/typio": "__default__profile__",
             "file:///home/raahim/projects/freelance/20240523/abeer": "__default__profile__",
             "file:///home/raahim/projects/forks/ds4drv": "__default__profile__",
-            "file:///home/raahim/projects/people/abeer/20250430": "__default__profile__"
+            "file:///home/raahim/projects/people/abeer/20250430": "__default__profile__",
+            "file:///home/raahim/projects/ntl/ndev/muhammadahmad4071/stock-markup": "__default__profile__",
+            "file:///home/raahim/projects/ntl/ndev/muhammadahmad4071/animation-blob/animation-blob": "__default__profile__",
+            "file:///home/raahim/projects/ntl/ndev/muhammadahmad4071/paragon": "__default__profile__",
+            "file:///home/raahim/projects/people/ruyan/python": "__default__profile__",
+            "file:///home/raahim/projects/people/ruyan/python/snake": "__default__profile__",
+            "file:///home/raahim/projects/people/ruyan/python/learning": "__default__profile__",
+            "file:///home/raahim/projects/ntl/ndev/muhammadahmad4071/morfeus/frontend": "__default__profile__",
+            "file:///home/raahim/projects/neoflux/omap/poc": "__default__profile__"
         },
         "emptyWindows": {}
     },
@@ -29,7 +37,7 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/raahim/projects/people/abeer/20250430"
+                "folderUri": "file:///home/raahim/projects/neoflux/omap/poc"
             }
         ],
         "emptyWindows": []
@@ -1879,14 +1887,15 @@
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/raahim/projects/people/abeer/20250430",
-            "backupPath": "/home/raahim/.config/Code - OSS/Backups/7f71f6ddee0239efc7ac518d85a08b56",
+            "folder": "file:///home/raahim/projects/neoflux/omap/poc",
+            "backupPath": "/home/raahim/.config/Code - OSS/Backups/85b7166e6e1dc2d28a4f99466bc41afe",
             "uiState": {
                 "mode": 1,
-                "x": 965,
-                "y": 46,
-                "width": 949,
-                "height": 1148
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1200,
+                "zoomLevel": 1
             }
         },
         "openedWindows": []
@@ -1922,5 +1931,45 @@
         }
     },
     "telemetry.devDeviceId": "a9aad0b2-a0bd-4258-ba09-3369be255ec9",
-    "windowControlHeight": 50
+    "windowControlHeight": 42,
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 397,
+            "auxiliaryBarWidth": 300,
+            "workspaces": {
+                "ac0ca9a93733013036eebeb503918896": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "225e63c0370c800d9e5db826d8ac72a6": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "2aa76d1d68243eca3b0b8577ffb8cd52": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "aaede7fe7b4f824816ff736a0f086327": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "912107d64e0d9c249c644851bc0649ab": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "b8861783d54fcb798db86176bba89594": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "61f3c089b0cd6838cfc15dddffeba75f": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "80a86b39042baf9e37ecfe3e89b7b7cf": {
+                    "sideBarVisible": false,
+                    "auxiliaryBarVisible": false
+                }
+            }
+        }
+    }
 }
