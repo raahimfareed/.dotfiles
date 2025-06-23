@@ -29,8 +29,8 @@ import Control.Monad;
 main = xmonad =<< statusBar myBar myPP toggleStrutsKey myConfig
 
 -- My stuff
-myBrowser = "firefox-developer-edition"
-myFileManager = "nemo"
+myBrowser = "zen-browser"
+myFileManager = "nautilus"
 myTerminal = "alacritty"
 myCodeEditor = "code"
 myTerminalCodeEditor = "nvim"
@@ -43,7 +43,8 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 -- keybindings
 myKeys :: [(String, X ())]
 myKeys = 
-  [ ("<XF86AudioMute>", spawn "amixer -D pulse sset Master toggle")
+  [ 
+    ("<XF86AudioMute>", spawn "amixer -D pulse sset Master toggle")
   , ("<XF86AudioRaiseVolume>",  spawn "pamixer --increase 5 --allow-boost")
   , ("<XF86AudioLowerVolume>",  spawn "pamixer --decrease 5 --allow-boost")
   , ("<XF86MonBrightnessUp>",  spawn "brightnessctl set +10%")
@@ -67,7 +68,7 @@ myKeys =
 myStartupHook :: X ()
 myStartupHook = do
   spawnOnce "flameshot"
-  spawnOnce "feh --bg-fill ~/Pictures/wallpapers/wallpaper-1.jpg"
+  spawnOnce "feh --bg-fill ~/Downloads/robinwall02-notext.png"
   spawnOnce "dunst"
   spawnOnce "picom"
 
