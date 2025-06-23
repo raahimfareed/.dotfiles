@@ -1,13 +1,14 @@
 
-Config { font            = "JetBrains Mono 9"
-       , additionalFonts = [ "Mononoki 9"
-                           , "Font Awesome 6 Free Solid 9"
-                           , "Font Awesome 6 Brands 9"
+Config { font            = "Gabarito 10"
+       , additionalFonts = [ "Mononoki 10"
+                           , "Font Awesome 6 Free Solid 10"
+                           , "Font Awesome 6 Brands 10"
                            ]
        , bgColor      = "#282c34"
        , fgColor      = "#ff6c6b"
        -- , position     = Static { xpos = 20, ypos = 20, width = 1880, height = 40 }
-       , position     = TopSize C 100 40
+       , position     = Static { xpos = 20, ypos = 20, width = 1880, height = 40 }
+       -- , position     = TopSize C 100 20
        , lowerOnStart = True
        , hideOnStart  = False
        , allDesktops  = True
