@@ -1,0 +1,2 @@
+^\.config/Code - OSS/
+!^\.config/Code - OSS/User/[^/]+\.json$
