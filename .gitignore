@@ -1,4 +1,8 @@
 # Ignore all Code - OSS data except config files
 .config/Code - OSS/*
 !.config/Code - OSS/User/
+.config/Code - OSS/User/History/
+.config/Code - OSS/User/workspaceStorage/
 !.config/Code - OSS/User/*.json
+!.config/Code - OSS/*.json
+!.config/Code - OSS/.gitignore
